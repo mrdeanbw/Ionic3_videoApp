@@ -1,0 +1,82 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button class="nav-btn"> 
+        <ion-icon name='arrow-back'></ion-icon>
+        
+    </button>
+
+    <ion-title>
+      Menus
+    </ion-title>
+ 
+    <ion-buttons end>
+      <button ion-button class="nav-btn" (click)="onPressMenu()">
+          <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons>
+    
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+  <ion-item>
+    <button ion-button (click)="showAlert()">
+      Click me!
+    </button>
+  </ion-item>
+  <div>
+      <button ion-button (click)="showAlert()">
+          Click me!
+      </button>
+  </div>  
+  <ion-item>
+    <button ion-button (click)="handle()">
+        go to other page
+    </button>
+  </ion-item>
+
+  <ion-item>
+    <ion-range [(ngModel)]="brightness">
+      <ion-icon class="range" range-left small name="sunny"></ion-icon>
+      <ion-icon class="range" range-right name="sunny"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+</ion-content>
+
+<!-- <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="openPage(homePage)">
+          Home
+        </button>
+        <button ion-item (click)="openPage(friendsPage)">
+          Friends
+        </button>
+        <button ion-item (click)="openPage(eventsPage)">
+          Events
+        </button>
+        <button ion-item (click)="closeMenu()">
+          Close Menu
+        </button>
+      </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav> -->
